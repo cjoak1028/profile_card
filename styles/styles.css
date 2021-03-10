@@ -53,8 +53,11 @@ body {
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color: hsl(185, 75%, 39%);
     font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+    background: url('../images/bg-pattern-top.svg'), url('../images/bg-pattern-bottom.svg'),  hsl(185, 75%, 39%);
+    background-repeat: no-repeat;
+    background-position: right calc(48vw + 5%) bottom 38vh, left calc(45vw + 10%) top 50vh;
 }
 
 span {
@@ -82,7 +85,7 @@ span {
 .card {
     max-width: 325px;
     min-width: 200px;
-    width: 80%;
+    width: 87%;
     height: 375px;
     background-color: white;
     border-radius: 15px;
@@ -111,8 +114,10 @@ span {
     align-items: center;
 }
 
-.card img {
-    flex-shrink: 0;
+.top img {
+    overflow: hidden;
+    min-width: 325px;
+    object-fit: cover;
 }
 
 .description {
@@ -151,9 +156,12 @@ span {
     padding-top: 8px;
 }
 
+/* Footer */
+
 .attribution {
     font-size: 11px; text-align: center; 
     width: 325px;
+    
 }
 
 .attribution a { 
